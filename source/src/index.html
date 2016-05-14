@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="format-detection" content="telephone=no">
+		
+    <link rel="stylesheet" href="styles/main.css">
+		
+		<title>Polymer Phonegap Starter-kit!</title>
+		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+		
+		<!-- cordova.js from Apache Cordova -->
+		<!-- <script src="cordova.js"></script> -->
+
+		<!-- imports for development -->
+		<link rel="import" href="imports.html">
+
+    <style is="custom-style" include="shared-styles"></style>
+
+		<!-- vulcanize for production -->
+		<!-- <link rel="import" href="vulcanize/vulcanize.html"> -->
+	</head>
+
+	<body>
+		
+    <template is="dom-bind" id="app">
+
+      <carbon-location use-hash-as-path route="{{route}}"></carbon-location>
+
+      <carbon-route route="{{route}}" pattern="/papercard" active="{{papercard}}"></carbon-route>
+      <carbon-route route="{{route}}" pattern="/papercheckbox" active="{{papercheckbox}}"></carbon-route>
+      <carbon-route route="{{route}}" pattern="/paperfab" active="{{paperfab}}"></carbon-route>
+      <carbon-route route="{{route}}" pattern="/paperinput" active="{{paperinput}}"></carbon-route>
+
+      <paper-drawer-panel id="paperDrawerPanel">
+
+        <paper-scroll-header-panel drawer fixed>
+
+          <paper-toolbar id="drawerToolbar">
+            <span class="menu-name">Menu</span>
+          </paper-toolbar>
+
+          <paper-menu class="app-menu" attr-for-selected="data-route" selected="[[route]]">
+
+            <a href="#/papercard" data-route="papercard" on-click="closeDrawer">
+              <span>Paper Card</span>
+            </a>
+
+            <a href="#/papercheckbox" data-route="papercheckbox" on-click="closeDrawer">
+              <span>Paper Checkbox</span>
+            </a>
+
+            <a href="#/paperfab" data-route="paperfab" on-click="closeDrawer">
+              <span>Paper Fab</span>
+            </a>
+
+            <a href="#/paperinput" data-route="paperinput" on-click="closeDrawer">
+              <span>Paper Input</span>
+            </a>
+
+          </paper-menu>
+
+        </paper-scroll-header-panel>
+
+        <paper-scroll-header-panel main keep-condensed-header fixed>
+        
+          <paper-toolbar id="mainToolbar" role="toolbar">
+            <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+            <div class="middle middle-container">
+              <div class="app-name">Polymer Elements</div>
+            </div>
+          </paper-toolbar>
+
+          <div class="content">
+            
+            <div hidden$="{{!papercard}}">
+              <page-paper-card></page-paper-card>
+            </div>
+
+            <div hidden$="{{!papercheckbox}}">
+              <page-paper-checkbox></page-paper-checkbox>
+            </div>
+
+            <div hidden$="{{!paperfab}}">
+              <page-paper-fab></page-paper-fab>
+            </div>
+
+            <div hidden$="{{!paperinput}}">
+              <page-paper-input></page-paper-input>
+            </div>
+
+          </div>
+
+        </paper-scroll-header-panel>
+
+      </paper-drawer-panel>
+
+    </template>
+
+    <script src="javascript/app.js"></script>
+
+	</body>
+
+</html>

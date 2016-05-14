@@ -1,0 +1,33 @@
+<dom-module id="page-paper-checkbox">
+
+    <template>
+
+        <style>
+      	paper-checkbox {
+        	width: 95%;
+        	margin-left: 10px;
+        	margin-right: 10px;
+        	--paper-card-header-color: #FF0000;
+      	}
+    	</style>
+    	
+    	<paper-card heading="Paper CheckBox">
+            <div class="card-content">
+                <paper-checkbox>Checkbox</paper-checkbox>
+                <paper-checkbox checked>Checkbox</paper-checkbox>
+                <paper-checkbox disabled>Disabled</paper-checkbox>
+            </div>
+        </paper-card>
+    	
+		
+
+    </template>
+
+</dom-module>
+
+<script>
+Polymer({
+    is: 'page-paper-checkbox'
+
+});
+</script>

@@ -1,0 +1,33 @@
+<dom-module id="page-paper-input">
+
+    <template>
+
+        <style>
+      	paper-card {
+        	width: 95%;
+        	margin-left: 10px;
+        	margin-right: 10px;
+        	--paper-card-header-color: #FF0000;
+      	}
+    	</style>
+    	<br>
+		<paper-card heading="Paper Input">
+			<div class="card-content">
+                <paper-input label="text"></paper-input>
+                <paper-textarea label="autoresizing"></paper-textarea>
+                <paper-input label="password" type="password"></paper-input>
+                <paper-input label="disabled" disabled></paper-input>
+                <paper-input label="contador de caracter" char-counter></paper-input>
+                <paper-input label="contador de caracter e validação" char-counter maxlength="10"></paper-input>
+            </div>
+		</paper-card>
+    </template>
+
+</dom-module>
+
+<script>
+Polymer({
+    is: 'page-paper-input'
+
+});
+</script>

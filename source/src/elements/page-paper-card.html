@@ -1,0 +1,32 @@
+<dom-module id="page-paper-card">
+
+    <template>
+
+        <style>
+      	paper-card {
+        	width: 95%;
+        	margin-left: 10px;
+        	margin-right: 10px;
+        	--paper-card-header-color: #FF0000;
+      	}
+    	</style>
+    	<br>
+		<paper-card heading="Paper Card">
+			<div class="card-content">Conteúdo</div>
+			<div class="card-actions">
+				<paper-button>Ações</paper-button>
+				<paper-button>Ações</paper-button>
+				<paper-button>Ações</paper-button>
+			</div>
+		</paper-card>
+
+    </template>
+
+</dom-module>
+
+<script>
+Polymer({
+    is: 'page-paper-card'
+
+});
+</script>

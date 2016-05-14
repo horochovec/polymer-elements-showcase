@@ -1,0 +1,28 @@
+<dom-module id="page-paper-fab">
+
+    <template>
+
+        <style>
+  			paper-fab.label {
+  				font-size: 20px;
+        }
+    	 </style>
+    	
+    	<paper-card heading="Paper Card">
+        <div class="card-content">
+          <paper-fab icon="favorite" title="heart"></paper-fab>
+          <paper-fab disabled icon="reply" title="reply"></paper-fab>
+          <paper-fab class="label" label="😻" title="heart eyes cat"></paper-fab>
+        </div>
+      </paper-card>
+
+    </template>
+
+</dom-module>
+
+<script>
+Polymer({
+    is: 'page-paper-fab'
+
+});
+</script>
